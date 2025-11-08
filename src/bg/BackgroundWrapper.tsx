@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Application } from "@pixi/react";
 import BackgroundScene from "./BackgroundScene";
 
