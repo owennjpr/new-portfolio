@@ -1,4 +1,3 @@
-// import { Txt } from "@char-motion/react";
 import "./App.css";
 import BackgroundWrapper from "./bg/BackgroundWrapper";
 import LandingInner from "./components/LandingInner";

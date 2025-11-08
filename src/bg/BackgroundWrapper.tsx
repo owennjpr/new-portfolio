@@ -1,11 +1,18 @@
 import { useRef } from "react";
 import { Application } from "@pixi/react";
 import BackgroundScene from "./BackgroundScene";
+import { motion } from "framer-motion";
 
 function BackgroundWrapper() {
   const pixiCanvas = useRef(null);
   return (
-    <div ref={pixiCanvas} className="fixed top-0 left-0 w-full h-screen -z-20">
+    <motion.div
+      ref={pixiCanvas}
+      className="fixed top-0 left-0 w-full h-screen -z-20"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       <Application
         resizeTo={pixiCanvas}
         background={"#F3EBC8"}
@@ -14,7 +21,7 @@ function BackgroundWrapper() {
       >
         <BackgroundScene />
       </Application>
-    </div>
+    </motion.div>
   );
 }
 

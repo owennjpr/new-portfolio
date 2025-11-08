@@ -1,5 +1,6 @@
 "use client";
 
+import { Txt } from "@char-motion/react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -9,7 +10,7 @@ export default function LandingInner() {
 
   useEffect(() => {
     const introAnim = async () => {
-      await new Promise((r) => setTimeout(r, 3000));
+      await new Promise((r) => setTimeout(r, 2500));
       // Step 1: Increase blur
       await anim.start({
         backdropFilter: "blur(20px)",
@@ -41,26 +42,47 @@ export default function LandingInner() {
         {/* Content */}
         <AnimatePresence mode="wait">
           {!expanded ? (
-            <motion.p
+            <motion.div
               key="intro"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, width: 140, height: 60 }}
-              exit={{ opacity: 0, width: 400, height: 100 }}
+              exit={{ opacity: 0, width: 400, height: 200 }}
               transition={{ duration: 1 }}
               className="flex justify-center items-center text-center"
             >
-              Hi, I'm Owen
-            </motion.p>
+              <Txt
+                enter={{ type: "typed sweep", options: { startDelay: 200 } }}
+              >
+                Hi, I'm Owen
+              </Txt>
+            </motion.div>
           ) : (
             <motion.div
               key="expanded"
-              initial={{ opacity: 0, width: 400, height: 100 }}
+              initial={{ opacity: 0, width: 400, height: 200 }}
               animate={{ opacity: 1, width: 400 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1 }}
-              className="flex flex-col items-center justify-center text-center"
+              className="flex flex-col items-center justify-center gap-4 text-center"
             >
-              <p>lorem ipsum dolor sit amet </p>
+              <Txt
+                enter={{
+                  type: "typed sweep",
+                  options: { startDelay: 0, rate: 20 },
+                }}
+                className="px-8"
+              >
+                I'm a Full-Stack developer from Seattle who enjoys building
+                interactive web experiences, software designed for social
+                impact, and creative audio applications.
+              </Txt>
+              <Txt
+                enter={{ type: "typed sweep", options: { startDelay: 3500 } }}
+                hover={{ type: "shuffle" }}
+                className="font-semibold underline text-emerald-600"
+              >
+                Explore my Portfolio
+              </Txt>
             </motion.div>
           )}
         </AnimatePresence>
