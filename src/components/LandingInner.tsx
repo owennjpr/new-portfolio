@@ -1,99 +1,164 @@
-"use client";
-
 import { Txt } from "@char-motion/react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
+import Projects from "./Projects";
 
 export default function LandingInner() {
-  const [expanded, setExpanded] = useState(false);
-  const anim = useAnimation();
-
+  const [step, setStep] = useState<number>(0);
+  const overlay = useAnimation();
+  const internal = useAnimation();
+  const main = useAnimation();
   useEffect(() => {
-    const introAnim = async () => {
-      await new Promise((r) => setTimeout(r, 2500));
-      // Step 1: Increase blur
-      await anim.start({
-        backdropFilter: "blur(20px)",
-        transition: { duration: 1, ease: "easeInOut" },
-      });
-
-      // Step 2: Change content
-      setExpanded(true);
-      await new Promise((r) => setTimeout(r, 500));
-
-      // Step 3: Shrink blur back down
-      await anim.start({
-        backdropFilter: "blur(0px)",
-        transition: { duration: 1, ease: "easeInOut" },
-      });
+    const animateStep = async () => {
+      switch (step) {
+        case 0:
+          await internal.start({
+            opacity: 1,
+            width: 150,
+            height: 50,
+            transition: { duration: 1 },
+          });
+          await new Promise((r) => setTimeout(r, 2500));
+          setStep(1);
+          break;
+        case 1:
+          await overlay.start({
+            backdropFilter: "blur(20px)",
+            transition: { duration: 1, ease: "easeInOut" },
+          });
+          await internal.start({
+            opacity: 0,
+            width: 400,
+            height: 250,
+            transition: { duration: 1 },
+          });
+          setStep(2);
+          break;
+        case 2:
+          await Promise.all([
+            internal.start({
+              opacity: 1,
+              transition: { duration: 1 },
+            }),
+            overlay.start({
+              backdropFilter: "blur(0px)",
+              transition: { duration: 1, ease: "easeInOut" },
+            }),
+          ]);
+          break;
+        case 3:
+          await Promise.all([
+            overlay.start({
+              backdropFilter: "blur(20px)",
+              transition: { duration: 1, ease: "easeInOut" },
+            }),
+            internal.start({
+              opacity: 0,
+              transition: { duration: 1 },
+            }),
+          ]);
+          setStep(4);
+          break;
+        case 4:
+          await internal.start({
+            width: 0,
+            height: 0,
+            transition: { duration: 0.5 },
+          });
+          setStep(5);
+          break;
+        case 5:
+          await main.start({
+            opacity: 1,
+            transition: { duration: 1 },
+          });
+          break;
+      }
     };
-
-    introAnim();
-  }, [anim]);
+    animateStep();
+  }, [overlay, internal, main, step]);
 
   return (
-    <div className="relative flex justify-center items-center">
-      {/* Background box */}
-      <motion.div
-        layout
-        className="relative flex flex-col justify-center items-center rounded-2xl glassBorder"
-        transition={{ layout: { duration: 1, ease: "easeInOut" } }}
-      >
-        {/* Content */}
-        <AnimatePresence mode="wait">
-          {!expanded ? (
-            <motion.div
-              key="intro"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, width: 140, height: 60 }}
-              exit={{ opacity: 0, width: 400, height: 200 }}
-              transition={{ duration: 1 }}
-              className="flex justify-center items-center text-center"
-            >
-              <Txt
-                enter={{ type: "typed sweep", options: { startDelay: 200 } }}
-              >
-                Hi, I'm Owen
-              </Txt>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="expanded"
-              initial={{ opacity: 0, width: 400, height: 200 }}
-              animate={{ opacity: 1, width: 400 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1 }}
-              className="flex flex-col items-center justify-center gap-4 text-center"
-            >
-              <Txt
-                enter={{
-                  type: "typed sweep",
-                  options: { startDelay: 0, rate: 20 },
-                }}
-                className="px-8"
-              >
-                I'm a Full-Stack developer from Seattle who enjoys building
-                interactive web experiences, software designed for social
-                impact, and creative audio applications.
-              </Txt>
-              <Txt
-                enter={{ type: "typed sweep", options: { startDelay: 3500 } }}
-                hover={{ type: "shuffle" }}
-                className="font-semibold underline text-emerald-600"
-              >
-                Explore my Portfolio
-              </Txt>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.div>
+    <div className="w-full h-full flex justify-center items-center p-8">
+      <div className="relative">
+        {step < 5 && (
+          <motion.div
+            layout
+            className="relative flex flex-col justify-center items-center  glassBorder"
+            transition={{ layout: { duration: 1, ease: "easeInOut" } }}
+          >
+            <AnimatePresence mode="wait">
+              {step < 2 ? (
+                <motion.div
+                  key="intro"
+                  initial={{ width: 0, height: 0, opacity: 0 }}
+                  animate={internal}
+                  className="flex justify-center items-center text-center"
+                >
+                  <Txt
+                    enter={{
+                      type: "typed sweep",
+                      options: { startDelay: 200 },
+                    }}
+                  >
+                    Hi, I'm Owen
+                  </Txt>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="expanded"
+                  initial={{ opacity: 1, width: 400, height: 250 }}
+                  animate={internal}
+                  className="flex flex-col items-center justify-center gap-4 text-center"
+                >
+                  <>
+                    <Txt
+                      enter={{
+                        type: "typed sweep",
+                        options: { startDelay: 0, rate: 20 },
+                      }}
+                      className="px-8"
+                    >
+                      I'm a Full-Stack developer from Seattle who enjoys
+                      building interactive web experiences, software designed
+                      for social impact, and creative audio applications.
+                    </Txt>
+                    <Txt
+                      enter={{
+                        type: "typed sweep",
+                        options: { startDelay: 3500 },
+                      }}
+                      hover={{ type: "shuffle" }}
+                      className="font-semibold text-emerald-600 cursor-pointer"
+                      onClick={() => {
+                        if (step === 2) setStep(3);
+                      }}
+                    >
+                      Explore
+                    </Txt>
+                  </>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        )}
 
-      {/* Foreground overlay blur layer */}
-      <motion.div
-        className="absolute inset-0 rounded-2xl pointer-events-none"
-        animate={anim}
-        initial={{ backdropFilter: "blur(0px)" }}
-      />
+        {/* Foreground overlay blur layer */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          animate={overlay}
+          initial={{ backdropFilter: "blur(0px)" }}
+        />
+      </div>
+      {step >= 5 && (
+        <motion.div
+          className="w-full h-full flex flex-col gap-32 items-center"
+          initial={false}
+          animate={main}
+        >
+          <Projects />
+        </motion.div>
+      )}
     </div>
   );
 }
