@@ -1,10 +1,11 @@
 import TypescriptLogo from "../logos/TypescriptLogo";
 import ReactLogo from "../logos/ReactLogo";
 import PostgresLogo from "../logos/PostgresLogo";
+import LinkButton from "../LinkButton";
 
 function ProjectCoeqwal() {
   return (
-    <div className="glassBorder">
+    <div className="glassBorder p-4">
       <div className="flex flex-col justify-center items-center sm:justify-start sm:flex-row gap-4">
         <h2 className="text-xl sm:text-3xl text-center sm:text-left w-full sm:w-auto">
           COEQWAL Data Visualization
@@ -38,8 +39,8 @@ function ProjectCoeqwal() {
         still in development with a completed functional prototype in the
         repository below.
       </p>
-      <div className="w-full flex flex-row mt-4 gap-4 justify-center sm:justify-start">
-        {/* <LinkButton
+      <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
+        <LinkButton
           link="https://coeqwal-web-game.vercel.app/"
           text="Project"
         />
@@ -49,8 +50,8 @@ function ProjectCoeqwal() {
         />
         <LinkButton
           link="https://github.com/owennjpr/COEQWAL-WebGame"
-          text="Git Repo"
-        /> */}
+          text="Git Repository"
+        />
       </div>
     </div>
   );

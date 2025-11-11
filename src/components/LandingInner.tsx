@@ -152,10 +152,11 @@ export default function LandingInner() {
       </div>
       {step >= 5 && (
         <motion.div
-          className="w-full h-full flex flex-col gap-32 items-center"
+          className="w-full h-full flex flex-col gap-16 items-center"
           initial={false}
           animate={main}
         >
+          <p className="text-3xl">Projects</p>
           <Projects />
         </motion.div>
       )}
