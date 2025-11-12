@@ -1,7 +1,7 @@
 import TypescriptLogo from "../logos/TypescriptLogo";
-import ReactLogo from "../logos/ReactLogo";
 import LinkButton from "../LinkButton";
 import NodeJSLogo from "../logos/NodeJSLogo";
+import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
 

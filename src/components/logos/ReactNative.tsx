@@ -1,4 +1,4 @@
-function Logo(s: number) {
+function Logo({ s }: { s: number }) {
   return (
     <a href="https://reactnative.dev/">
       <svg

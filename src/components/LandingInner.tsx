@@ -2,6 +2,7 @@ import { Txt } from "@char-motion/react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import Projects from "./Projects";
+import Experience from "./Experience";
 
 export default function LandingInner() {
   const [step, setStep] = useState<number>(0);
@@ -156,8 +157,10 @@ export default function LandingInner() {
           initial={false}
           animate={main}
         >
-          <p className="text-3xl">Projects</p>
-          <Projects />
+          {/* <p className="text-3xl">Projects</p>
+          <Projects /> */}
+          <p className="text-3xl">Experience</p>
+          <Experience />
         </motion.div>
       )}
     </div>
