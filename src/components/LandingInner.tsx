@@ -1,15 +1,15 @@
 import { Txt } from "@char-motion/react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import Projects from "./Projects";
-import Experience from "./Experience";
-
+import { useEffect, useRef, useState } from "react";
 export default function LandingInner() {
   const [step, setStep] = useState<number>(0);
+  const targetWidth = useRef<number>(window.innerWidth * 0.4);
+  const targetHeight = 350;
   const overlay = useAnimation();
   const internal = useAnimation();
   const main = useAnimation();
   useEffect(() => {
+    targetWidth.current = Math.max(window.innerWidth * 0.4, 350);
     const animateStep = async () => {
       switch (step) {
         case 0:
@@ -19,7 +19,7 @@ export default function LandingInner() {
             height: 50,
             transition: { duration: 1 },
           });
-          await new Promise((r) => setTimeout(r, 2500));
+          await new Promise((r) => setTimeout(r, 1000));
           setStep(1);
           break;
         case 1:
@@ -29,8 +29,8 @@ export default function LandingInner() {
           });
           await internal.start({
             opacity: 0,
-            width: 400,
-            height: 250,
+            width: targetWidth.current,
+            height: targetHeight,
             transition: { duration: 1 },
           });
           setStep(2);
@@ -47,40 +47,13 @@ export default function LandingInner() {
             }),
           ]);
           break;
-        case 3:
-          await Promise.all([
-            overlay.start({
-              backdropFilter: "blur(20px)",
-              transition: { duration: 1, ease: "easeInOut" },
-            }),
-            internal.start({
-              opacity: 0,
-              transition: { duration: 1 },
-            }),
-          ]);
-          setStep(4);
-          break;
-        case 4:
-          await internal.start({
-            width: 0,
-            height: 0,
-            transition: { duration: 0.5 },
-          });
-          setStep(5);
-          break;
-        case 5:
-          await main.start({
-            opacity: 1,
-            transition: { duration: 1 },
-          });
-          break;
       }
     };
     animateStep();
   }, [overlay, internal, main, step]);
 
   return (
-    <div className="w-full h-full flex justify-center items-center p-8">
+    <div className="w-full h-screen flex justify-center items-center p-8">
       <div className="relative">
         {step < 5 && (
           <motion.div
@@ -108,36 +81,57 @@ export default function LandingInner() {
               ) : (
                 <motion.div
                   key="expanded"
-                  initial={{ opacity: 1, width: 400, height: 250 }}
+                  initial={{
+                    opacity: 1,
+                    width: targetWidth.current,
+                    height: targetHeight,
+                  }}
                   animate={internal}
                   className="flex flex-col items-center justify-center gap-4 text-center"
                 >
-                  <>
+                  <div className="flex flex-row gap-2 items-baseline">
                     <Txt
+                      className="text-2xl"
                       enter={{
                         type: "typed sweep",
-                        options: { startDelay: 0, rate: 20 },
+                        options: { startDelay: 500 },
                       }}
-                      className="px-8"
                     >
-                      I'm a Full-Stack developer from Seattle who enjoys
-                      building interactive web experiences, software designed
-                      for social impact, and creative audio applications.
+                      Owen Prendergast
                     </Txt>
                     <Txt
                       enter={{
                         type: "typed sweep",
-                        options: { startDelay: 3500 },
-                      }}
-                      hover={{ type: "shuffle" }}
-                      className="font-semibold text-emerald-600 cursor-pointer"
-                      onClick={() => {
-                        if (step === 2) setStep(3);
+                        options: { startDelay: 1500 },
                       }}
                     >
-                      Explore
+                      he/him
                     </Txt>
-                  </>
+                  </div>
+                  <Txt
+                    enter={{
+                      type: "randomized",
+                      options: { startDelay: 1000, maxDelay: 1500 },
+                    }}
+                    className="px-8"
+                  >
+                    I'm a Full-Stack developer and recent CS/STS grad from Tufts
+                    University, originally from Seattle, Washington. My work
+                    focuses on web development, creative audio applications, and
+                    software designed for social impact. Explore this site to
+                    see everything I have been working on!
+                  </Txt>
+                  <Txt
+                    enter={{
+                      type: "typed sweep",
+                      options: { startDelay: 2500 },
+                    }}
+                    hover={{ type: "shuffle" }}
+                    className="font-semibold text-emerald-600 cursor-pointer"
+                    onClick={() => {}}
+                  >
+                    Explore
+                  </Txt>
                 </motion.div>
               )}
             </AnimatePresence>
@@ -146,23 +140,11 @@ export default function LandingInner() {
 
         {/* Foreground overlay blur layer */}
         <motion.div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none rounded-2xl"
           animate={overlay}
           initial={{ backdropFilter: "blur(0px)" }}
         />
       </div>
-      {step >= 5 && (
-        <motion.div
-          className="w-full h-full flex flex-col gap-16 items-center"
-          initial={false}
-          animate={main}
-        >
-          {/* <p className="text-3xl">Projects</p>
-          <Projects /> */}
-          <p className="text-3xl">Experience</p>
-          <Experience />
-        </motion.div>
-      )}
     </div>
   );
 }

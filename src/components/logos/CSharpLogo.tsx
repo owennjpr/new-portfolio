@@ -1,4 +1,4 @@
-function Logo(s: number) {
+function Logo({ s }: { s: number }) {
   return (
     <svg
       height={s}
