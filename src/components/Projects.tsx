@@ -7,7 +7,9 @@ import ProjectWAOT from "./projects/ProjectWAOT";
 function Projects() {
   return (
     <div className="w-full h-full flex flex-col items-center gap-8">
-      <p className="text-4xl pt-16">PROJECTS</p>
+      <p className="text-4xl pt-16" id="projects">
+        PROJECTS
+      </p>
       <ProjectCharMotion />
       <ProjectCoeqwal />
       <ProjectFormerlyMe />

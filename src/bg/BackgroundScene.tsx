@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useApplication } from "@pixi/react";
-import { Container } from "pixi.js";
+import { Container, Sprite, Texture } from "pixi.js";
 import type { Planet, Tree } from "./types";
 import {
   populatePlanet,
   createPlanetGraphics,
-  //   createTreeLines,
   generateNextString,
   createTreeLine,
 } from "./helpers";
@@ -18,6 +17,8 @@ function BackgroundScene() {
   // Setup and cleanup
   useEffect(() => {
     if (!app) return;
+
+    let running = true;
 
     // Initialize planets
     const initializePlanets = () => {
@@ -93,7 +94,7 @@ function BackgroundScene() {
 
     // Animation loop
     const animate = () => {
-      if (!app) return;
+      if (!app || !running) return;
 
       const rotateSpeed = 0.0005;
 
@@ -113,8 +114,26 @@ function BackgroundScene() {
           } else {
             if (t.currGen === t.maxGen) {
               t.grown = true;
-              t.graphics.cacheAsTexture(true);
-              planet.staticContainer.addChild(t.graphics);
+              if (t.graphics) {
+                const root = t.rootOffset!;
+                const bounds = t.graphics.getLocalBounds();
+                const rt: Texture = app.renderer.generateTexture(t.graphics);
+                const sprite = Sprite.from(rt);
+                sprite.anchor.set(
+                  (root.x - bounds.x) / bounds.width,
+                  (root.y - bounds.y) / bounds.height
+                );
+                sprite.x = root.x;
+                sprite.y = root.y;
+
+                planet.staticContainer.addChild(sprite);
+                t.sprite = sprite;
+                t.rt = rt;
+
+                t.graphics?.destroy(true);
+                t.graphics = undefined;
+              }
+
               t.active = false;
               planet.nextToGrow++;
               if (planet.nextToGrow < planet.trees.length)
@@ -136,34 +155,36 @@ function BackgroundScene() {
     initializePlanets();
     animate();
 
-    // Handle window resize
-    const handleResize = () => {
-      initializePlanets();
-    };
+    // const handleResize = () => {
+    //   initializePlanets();
+    // };
 
-    window.addEventListener("resize", handleResize);
-
+    // window.addEventListener("resize", handleResize);
     // Cleanup
     return () => {
-      window.removeEventListener("resize", handleResize);
+      running = false;
+      // window.removeEventListener("resize", handleResize);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = undefined;
       }
-      requestAnimationFrame(() => {
-        planetsRef.current.forEach((planet) => {
-          planet.trees.forEach((t) => {
-            t.graphics.destroy(true);
+      planetsRef.current.forEach((planet) => {
+        planet.trees.forEach((t) => {
+          t.sprite?.destroy({
+            children: true,
+            texture: false,
+            textureSource: false,
           });
-          planet.staticContainer.destroy({ children: true });
-          planet.dynamicContainer.destroy({ children: true });
+          t.sprite = undefined;
+          t.rt?.destroy(true);
+          t.rt = undefined;
+          t.graphics?.destroy({ children: true });
+          t.graphics = undefined;
         });
-        planetsRef.current = [];
-        app?.destroy(true, {
-          children: true,
-          texture: true,
-          textureSource: true,
-        });
+        planet.staticContainer.destroy({ children: true });
+        planet.dynamicContainer.destroy({ children: true });
       });
+      planetsRef.current = [];
     };
   }, [app]);
 

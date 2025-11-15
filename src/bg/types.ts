@@ -1,4 +1,4 @@
-import type { Container, Graphics } from "pixi.js";
+import type { Container, Graphics, Sprite, Texture } from "pixi.js";
 
 export type RuleSet = { rule: string; prob: number }[];
 
@@ -23,7 +23,10 @@ export type Tree = {
   maxGen: number;
   active: boolean;
   grown: boolean;
-  graphics: Graphics;
+  graphics: Graphics | undefined;
+  sprite?: Sprite;
+  rt?: Texture;
+  rootOffset?: { x: number; y: number };
 };
 
 export type Planet = {

@@ -1,5 +1,6 @@
 import "./App.css";
 import BackgroundWrapper from "./bg/BackgroundWrapper";
+import BackToTop from "./components/BackToTop";
 import Experience from "./components/Experience";
 import LandingInner from "./components/LandingInner";
 import Projects from "./components/Projects";
@@ -15,6 +16,7 @@ function App() {
         </div>
       </div>
       <BackgroundWrapper />
+      <BackToTop />
     </div>
   );
 }

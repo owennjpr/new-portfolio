@@ -1,15 +1,42 @@
 import { Txt } from "@char-motion/react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 export default function LandingInner() {
   const [step, setStep] = useState<number>(0);
-  const targetWidth = useRef<number>(window.innerWidth * 0.4);
+  const [targetWidth, setTargetWidth] = useState<number>(
+    window.innerWidth * 0.4
+  );
   const targetHeight = 350;
   const overlay = useAnimation();
   const internal = useAnimation();
-  const main = useAnimation();
+
+  const explorePressed = () => {
+    const target = document.getElementById("projects");
+    target?.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
-    targetWidth.current = Math.max(window.innerWidth * 0.4, 350);
+    const handleResize = () => {
+      console.log("resizing");
+      setTargetWidth(Math.max(window.innerWidth * 0.5, 350));
+    };
+
+    window.addEventListener("resize", handleResize);
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (step > 1) {
+      internal.start({
+        width: targetWidth,
+        height: targetHeight,
+        transition: { duration: 1, ease: "easeInOut" },
+      });
+    }
+  }, [targetWidth, internal, step]);
+
+  useEffect(() => {
     const animateStep = async () => {
       switch (step) {
         case 0:
@@ -29,7 +56,7 @@ export default function LandingInner() {
           });
           await internal.start({
             opacity: 0,
-            width: targetWidth.current,
+            width: targetWidth,
             height: targetHeight,
             transition: { duration: 1 },
           });
@@ -50,7 +77,7 @@ export default function LandingInner() {
       }
     };
     animateStep();
-  }, [overlay, internal, main, step]);
+  }, [overlay, internal, step, targetWidth]);
 
   return (
     <div className="w-full h-screen flex justify-center items-center p-8">
@@ -83,7 +110,7 @@ export default function LandingInner() {
                   key="expanded"
                   initial={{
                     opacity: 1,
-                    width: targetWidth.current,
+                    width: targetWidth,
                     height: targetHeight,
                   }}
                   animate={internal}
@@ -91,7 +118,7 @@ export default function LandingInner() {
                 >
                   <div className="flex flex-row gap-2 items-baseline">
                     <Txt
-                      className="text-2xl"
+                      className="text-xl md:text-2xl"
                       enter={{
                         type: "typed sweep",
                         options: { startDelay: 500 },
@@ -104,6 +131,7 @@ export default function LandingInner() {
                         type: "typed sweep",
                         options: { startDelay: 1500 },
                       }}
+                      className="text-sm md:text-base"
                     >
                       he/him
                     </Txt>
@@ -113,7 +141,7 @@ export default function LandingInner() {
                       type: "randomized",
                       options: { startDelay: 1000, maxDelay: 1500 },
                     }}
-                    className="px-8"
+                    className="px-8 text-sm md:text-base"
                   >
                     I'm a Full-Stack developer and recent CS/STS grad from Tufts
                     University, originally from Seattle, Washington. My work
@@ -128,7 +156,7 @@ export default function LandingInner() {
                     }}
                     hover={{ type: "shuffle" }}
                     className="font-semibold text-emerald-600 cursor-pointer"
-                    onClick={() => {}}
+                    onClick={explorePressed}
                   >
                     Explore
                   </Txt>

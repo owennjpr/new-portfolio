@@ -1,4 +1,4 @@
-import { Container, Graphics } from "pixi.js";
+import { Container, Graphics, Sprite } from "pixi.js";
 import { rules } from "./constants";
 import type { DrawRules, Planet, RuleSet, Tree } from "./types";
 
@@ -40,11 +40,11 @@ const randomInRange = (min: number, max: number) =>
 
 const randomMaxGen = () => {
   const genOptions = [
-    { p: 0.35, g: 2 },
-    { p: 0.25, g: 3 },
-    { p: 0.15, g: 4 },
+    { p: 0.4, g: 2 },
+    { p: 0.4, g: 3 },
+    { p: 0.05, g: 4 },
     { p: 0.15, g: 5 },
-    { p: 0.1, g: 6 },
+    { p: 0, g: 6 },
   ];
   const n = Math.random();
   let t = 0;
@@ -70,7 +70,7 @@ export const populatePlanet = (planet: Planet) => {
       growthPercent: 0,
       currGen: 0,
       maxGen: randomMaxGen(),
-      active: j < 5,
+      active: j < 8,
       grown: false,
       graphics: new Graphics(),
     });
@@ -195,11 +195,25 @@ export function drawLsysLerp(
   }
 }
 
-export const createTreeLine = (planet: Planet, tree: Tree): Graphics => {
+export const createTreeLine = (
+  planet: Planet,
+  tree: Tree
+): Graphics | Sprite => {
+  if (tree.sprite) {
+    return tree.sprite;
+  }
+
+  if (!tree.graphics) {
+    tree.graphics = new Graphics();
+  }
   tree.graphics.clear();
   const relativeX = tree.x - planet.x;
   const relativeY = tree.y - planet.y;
 
+  tree.rootOffset = {
+    x: relativeX,
+    y: relativeY,
+  };
   drawLsysLerp(
     tree.graphics,
     relativeX,
