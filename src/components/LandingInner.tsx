@@ -168,7 +168,7 @@ export default function LandingInner() {
 
         {/* Foreground overlay blur layer */}
         <motion.div
-          className="absolute inset-0 pointer-events-none rounded-2xl"
+          className="absolute inset-0 pointer-events-none rounded-2xl z-20"
           animate={overlay}
           initial={{ backdropFilter: "blur(0px)" }}
         />

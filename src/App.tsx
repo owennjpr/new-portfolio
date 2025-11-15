@@ -9,9 +9,9 @@ function App() {
   return (
     <div>
       <BackgroundWrapper />
-      <div className="w-full flex flex-col justify-center items-center z-20">
+      <div className="w-full flex flex-col justify-center items-center">
         <LandingInner />
-        <div className="w-7/8 flex flex-col justify-center gap-32 mb-8 z-20">
+        <div className="w-7/8 flex flex-col justify-center gap-32 mb-8">
           <Projects />
           <Experience />
         </div>
