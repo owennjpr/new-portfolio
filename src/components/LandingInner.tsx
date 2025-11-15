@@ -80,7 +80,7 @@ export default function LandingInner() {
   }, [overlay, internal, step, targetWidth]);
 
   return (
-    <div className="w-full h-screen flex justify-center items-center p-8">
+    <div className="w-full h-screen flex justify-center items-center p-8 z-20">
       <div className="relative">
         {step < 5 && (
           <motion.div
