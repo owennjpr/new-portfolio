@@ -26,6 +26,7 @@
 }
 
 .glassBorder {
+  z-index: 10;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -34,6 +35,13 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: backdrop-filter 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
 }
+
+.canvasWrapper {
+  transform: none;
+  will-change: auto;
+  backface-visibility: hidden;
+}
+
 :root {
   font-family:  "Courier Prime", monospace;
   line-height: 1.5;

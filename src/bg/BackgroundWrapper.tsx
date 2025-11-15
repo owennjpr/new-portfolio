@@ -8,7 +8,7 @@ function BackgroundWrapper() {
   return (
     <div
       ref={pixiCanvas}
-      className="fixed top-0 left-0 w-full h-screen z-0 pointer-events-none"
+      className="canvasWrapper fixed top-0 left-0 w-full h-screen z-0 pointer-events-none"
     >
       <Application
         resizeTo={pixiCanvas}
