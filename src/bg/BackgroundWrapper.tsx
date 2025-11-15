@@ -8,14 +8,14 @@ function BackgroundWrapper() {
   return (
     <motion.div
       ref={pixiCanvas}
-      className="fixed top-0 left-0 w-full h-screen -z-20"
+      className="fixed top-0 left-0 w-full h-screen -z-20 pointer-events-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
       <Application
         resizeTo={pixiCanvas}
-        background={"#F3EBC8"}
+        backgroundAlpha={0}
         resolution={window.devicePixelRatio || 1}
         autoDensity={true}
       >
