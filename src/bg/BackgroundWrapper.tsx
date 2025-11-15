@@ -1,5 +1,5 @@
 // BackgroundWrapper.tsx
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { Application } from "@pixi/react";
 import BackgroundScene from "./BackgroundScene";
