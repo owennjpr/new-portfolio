@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <div>
+      <BackgroundWrapper />
       <div className="w-full flex flex-col justify-center items-center z-20">
         <LandingInner />
         <div className="w-7/8 flex flex-col justify-center gap-32 mb-8 z-20">
@@ -15,7 +16,6 @@ function App() {
           <Experience />
         </div>
       </div>
-      <BackgroundWrapper />
       <BackToTop />
     </div>
   );
