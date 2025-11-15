@@ -13,6 +13,7 @@ function BackgroundWrapper() {
       <Application
         resizeTo={pixiCanvas}
         backgroundAlpha={0}
+        premultipliedAlpha={false}
         resolution={window.devicePixelRatio || 1}
         autoDensity={true}
       >
