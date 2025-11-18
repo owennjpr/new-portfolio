@@ -3,6 +3,7 @@ import TypescriptLogo from "../logos/TypescriptLogo";
 import ReactNativeLogo from "../logos/ReactNative";
 import NodeJSLogo from "../logos/NodeJSLogo";
 import ExpoLogo from "../logos/ExpoLogo";
+import TailwindLogo from "../logos/TailwindLogo";
 import FirebaseLogo from "../logos/FirebaseLogo";
 import CloudflareLogo from "../logos/CloudflareLogo";
 import MongodbLogo from "../logos/MongoLogo";
@@ -35,6 +36,7 @@ function ExperienceFreebites() {
           <p className="text-xl">Technologies:</p>
           <ReactNativeLogo s={32} />
           <ExpoLogo s={32} />
+          <TailwindLogo s={32} />
           <TypescriptLogo s={32} />
           <NodeJSLogo s={32} />
           <FirebaseLogo s={32} />
@@ -44,7 +46,6 @@ function ExperienceFreebites() {
           <ReactLogo s={32} />
           <NextJSLogo s={32} />
           <VercelLogo s={32} />
-          <img src="/tailwind.png" width="48" />
         </div>
         <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
           <LinkButton

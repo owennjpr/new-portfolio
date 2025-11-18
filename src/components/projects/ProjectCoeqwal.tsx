@@ -1,6 +1,8 @@
 import TypescriptLogo from "../logos/TypescriptLogo";
 import ReactLogo from "../logos/ReactLogo";
 import PostgresLogo from "../logos/PostgresLogo";
+import NodeJSLogo from "../logos/NodeJSLogo";
+import VercelLogo from "../logos/VercelLogo";
 import LinkButton from "../LinkButton";
 
 function ProjectCoeqwal() {
@@ -14,6 +16,8 @@ function ProjectCoeqwal() {
           <ReactLogo s={32} />
           <TypescriptLogo s={32} />
           <PostgresLogo s={32} />
+          <NodeJSLogo s={32} />
+          <VercelLogo s={32} />
         </div>
       </div>
       <p className="text-sm sm:text-base text-center sm:text-start">

@@ -1,5 +1,6 @@
 import CppLogo from "../logos/CppLogo.";
 import LinkButton from "../LinkButton";
+import { Tooltip } from "react-tooltip";
 
 function ProjectPeakSynth() {
   return (
@@ -9,9 +10,21 @@ function ProjectPeakSynth() {
           PeakSynth
         </h2>
         <div className="flex flex-row gap-4 justify-center sm:justify-start w-full sm:w-auto">
-          <a href="https://juce.com/made-with-juce/">
-            <img src="/JUCE_Logo.png" width="36" />
-          </a>
+          <>
+            <a href="https://juce.com/made-with-juce/" className="anchor-juce">
+              <img src="/JUCE_Logo.png" width="36" />
+            </a>
+            <Tooltip
+              anchorSelect=".anchor-juce"
+              place="top"
+              style={{
+                backgroundColor: "rgb(74,72,60",
+                borderRadius: 8,
+              }}
+            >
+              JUCE
+            </Tooltip>
+          </>
           <CppLogo s={32} />
         </div>
       </div>

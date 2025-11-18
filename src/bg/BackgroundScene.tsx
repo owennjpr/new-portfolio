@@ -39,19 +39,19 @@ function BackgroundScene() {
           x: width * 0.4,
           y: height * 0.3,
           radius: width * 0.1,
-          numTrees: 60,
+          numTrees: 35,
         },
         {
           x: width * 0.8,
           y: height * 0.75,
           radius: width * 0.075,
-          numTrees: 30,
+          numTrees: 25,
         },
         {
           x: width * 0.1,
           y: height,
           radius: width * 0.33,
-          numTrees: 90,
+          numTrees: 50,
         },
       ];
 

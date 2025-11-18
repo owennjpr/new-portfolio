@@ -4,6 +4,7 @@ import NodeJSLogo from "../logos/NodeJSLogo";
 import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
+import NPMLogo from "../logos/NPMLogo";
 
 function ProjectCharMotion() {
   return (
@@ -15,6 +16,7 @@ function ProjectCharMotion() {
         <div className="flex flex-row gap-4 justify-center sm:justify-start w-full sm:w-auto">
           <ReactLogo s={32} />
           <TypescriptLogo s={32} />
+          <NPMLogo s={32} />
           <NodeJSLogo s={32} />
           <NextJSLogo s={32} />
           <VercelLogo s={32} />

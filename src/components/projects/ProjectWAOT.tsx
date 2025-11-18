@@ -3,6 +3,7 @@ import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
 import LinkButton from "../LinkButton";
+import TailwindLogo from "../logos/TailwindLogo";
 
 function ProjectWAOT() {
   return (
@@ -14,9 +15,9 @@ function ProjectWAOT() {
         <div className="flex flex-row gap-4 justify-center sm:justify-start w-full sm:w-auto">
           <ReactLogo s={32} />
           <TypescriptLogo s={32} />
+          <TailwindLogo s={32} />
           <NextJSLogo s={32} />
           <VercelLogo s={32} />
-          <img src="/tailwind.png" width="48" />
         </div>
       </div>
       <p className="text-sm sm:text-base text-center sm:text-start">

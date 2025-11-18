@@ -6,6 +6,7 @@ import GitHubLogo from "../logos/GithubLogo";
 import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
+import TailwindLogo from "../logos/TailwindLogo";
 
 function ExperienceJumboCode() {
   return (
@@ -28,13 +29,12 @@ function ExperienceJumboCode() {
           <p className="text-xl">Technologies:</p>
           <ReactLogo s={32} />
           <NextJSLogo s={32} />
+          <TailwindLogo s={32} />
           <TypescriptLogo s={32} />
           <NodeJSLogo s={32} />
-          <VercelLogo s={32} />
           <Postgres s={32} />
+          <VercelLogo s={32} />
           <GitHubLogo s={32} />
-
-          <img src="/tailwind.png" width="48" />
         </div>
         <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
           <LinkButton link="https://jumbocode.org/" text="JumboCode" />

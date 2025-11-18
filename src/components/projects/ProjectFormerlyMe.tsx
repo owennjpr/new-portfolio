@@ -3,6 +3,8 @@ import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
 import NodeJSLogo from "../logos/NodeJSLogo";
+import TailwindLogo from "../logos/TailwindLogo";
+import CloudflareLogo from "../logos/CloudflareLogo";
 import LinkButton from "../LinkButton";
 
 function ProjectFormerlyMe() {
@@ -15,8 +17,10 @@ function ProjectFormerlyMe() {
         <div className="flex flex-row gap-4 justify-center sm:justify-start w-full sm:w-auto">
           <ReactLogo s={32} />
           <TypescriptLogo s={32} />
+          <TailwindLogo s={32} />
           <NextJSLogo s={32} />
           <NodeJSLogo s={32} />
+          <CloudflareLogo s={32} />
           <VercelLogo s={32} />
         </div>
       </div>
