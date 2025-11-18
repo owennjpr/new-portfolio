@@ -4,10 +4,11 @@ import PostgresLogo from "../logos/PostgresLogo";
 import NodeJSLogo from "../logos/NodeJSLogo";
 import VercelLogo from "../logos/VercelLogo";
 import LinkButton from "../LinkButton";
+import ImageButton from "../ImageButton";
 
 function ProjectCoeqwal() {
   return (
-    <div className="glassBorder p-4">
+    <div className="glassBorder p-4 relative">
       <div className="flex flex-col justify-center items-center sm:justify-start sm:flex-row gap-4">
         <h2 className="text-xl sm:text-3xl text-center sm:text-left w-full sm:w-auto">
           COEQWAL Data Visualization
@@ -56,6 +57,7 @@ function ProjectCoeqwal() {
           link="https://github.com/owennjpr/COEQWAL-WebGame"
           text="Git Repository"
         />
+        <ImageButton />
       </div>
     </div>
   );

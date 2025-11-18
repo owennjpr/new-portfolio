@@ -5,10 +5,11 @@ import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
 import NPMLogo from "../logos/NPMLogo";
+import ImageButton from "../ImageButton";
 
 function ProjectCharMotion() {
   return (
-    <div className="glassBorder p-4">
+    <div className="glassBorder p-4 relative">
       <div className="flex flex-col justify-center items-center sm:justify-start sm:flex-row gap-4">
         <h2 className="text-xl sm:text-3xl text-center sm:text-left w-full sm:w-auto">
           Char Motion
@@ -44,6 +45,7 @@ function ProjectCharMotion() {
           link="https://github.com/owennjpr/char-motion"
           text="Git Repository"
         />
+        <ImageButton />
       </div>
     </div>
   );

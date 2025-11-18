@@ -1,10 +1,11 @@
 import CppLogo from "../logos/CppLogo.";
 import LinkButton from "../LinkButton";
 import { Tooltip } from "react-tooltip";
+import ImageButton from "../ImageButton";
 
 function ProjectPeakSynth() {
   return (
-    <div className="glassBorder p-4">
+    <div className="glassBorder p-4 relative">
       <div className="flex flex-col justify-center items-center sm:justify-start sm:flex-row gap-4">
         <h2 className="text-xl sm:text-3xl text-center sm:text-left w-full sm:w-auto">
           PeakSynth
@@ -40,6 +41,7 @@ function ProjectPeakSynth() {
           link="https://github.com/owennjpr/PeakSynth-Audio-Plugin"
           text="Git Repository & Download"
         />
+        <ImageButton />
       </div>
     </div>
   );

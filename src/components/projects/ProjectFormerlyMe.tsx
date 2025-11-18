@@ -6,10 +6,11 @@ import NodeJSLogo from "../logos/NodeJSLogo";
 import TailwindLogo from "../logos/TailwindLogo";
 import CloudflareLogo from "../logos/CloudflareLogo";
 import LinkButton from "../LinkButton";
+import ImageButton from "../ImageButton";
 
 function ProjectFormerlyMe() {
   return (
-    <div className="glassBorder p-4">
+    <div className="glassBorder p-4 relative">
       <div className="flex flex-col justify-center items-center sm:justify-start sm:flex-row gap-4">
         <h2 className="text-xl sm:text-3xl text-center sm:text-left w-full sm:w-auto">
           formerly.me
@@ -40,6 +41,7 @@ function ProjectFormerlyMe() {
       </p>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
         <LinkButton link="https://formerly.me" text="formerly.me" />
+        <ImageButton />
       </div>
     </div>
   );

@@ -4,10 +4,11 @@ import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
 import LinkButton from "../LinkButton";
 import TailwindLogo from "../logos/TailwindLogo";
+import ImageButton from "../ImageButton";
 
 function ProjectWAOT() {
   return (
-    <div className="glassBorder p-4">
+    <div className="glassBorder p-4 relative">
       <div className="flex flex-col justify-center items-center sm:justify-start sm:flex-row gap-4">
         <h2 className="text-xl sm:text-3xl text-center sm:text-left w-full sm:w-auto">
           Who's Afraid of Tailwind?
@@ -51,6 +52,7 @@ function ProjectWAOT() {
           link="https://github.com/asendlakowski/whos-afraid-tailwind"
           text="Git Repository"
         />
+        <ImageButton />
       </div>
     </div>
   );
