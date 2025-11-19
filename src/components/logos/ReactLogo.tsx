@@ -1,3 +1,4 @@
+import { Txt } from "@char-motion/react";
 import { Tooltip } from "react-tooltip";
 
 function Logo({ s }: { s: number }) {
@@ -24,7 +25,14 @@ function Logo({ s }: { s: number }) {
           borderRadius: 8,
         }}
       >
-        React
+        <Txt
+          enter={{
+            type: "typed sweep",
+            options: { rate: 30 },
+          }}
+        >
+          React
+        </Txt>
       </Tooltip>
     </>
   );

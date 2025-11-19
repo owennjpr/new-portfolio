@@ -156,7 +156,19 @@ function BackgroundScene() {
     animate();
 
     // const handleResize = () => {
-    //   initializePlanets();
+    //   const width = app.renderer.width;
+    //   const height = app.renderer.height;
+
+    //   planetsRef.current = planetsRef.current.map((planet, i) => {
+    //     switch (i) {
+    //       case 0:
+    //         return { ...planet, x: width * 0.4, y: height * 0.3 };
+    //       case 1:
+    //         return { ...planet, x: width * 0.8, y: height * 0.75 };
+    //       default:
+    //         return { ...planet, x: width * 0.1, y: height };
+    //     }
+    //   });
     // };
 
     // window.addEventListener("resize", handleResize);

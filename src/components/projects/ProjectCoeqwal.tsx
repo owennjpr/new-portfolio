@@ -57,7 +57,9 @@ function ProjectCoeqwal() {
           link="https://github.com/owennjpr/COEQWAL-WebGame"
           text="Git Repository"
         />
-        <ImageButton />
+        <ImageButton
+          paths={["COEQWAL_description.png", "COEQWAL_dashboard.png"]}
+        />
       </div>
     </div>
   );

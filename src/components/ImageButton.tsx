@@ -2,7 +2,12 @@ import { useState } from "react";
 import { Tooltip } from "react-tooltip";
 import { motion, AnimatePresence } from "framer-motion";
 
-function ImageButton() {
+interface ImageButtonProps {
+  paths: string[];
+}
+
+function ImageButton(props: ImageButtonProps) {
+  const { paths } = props;
   const [overlay, setOverlay] = useState<boolean>(false);
   return (
     <>
@@ -12,8 +17,12 @@ function ImageButton() {
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
             initial={{ opacity: 0 }}
             exit={{ opacity: 0 }}
-            className="z-20 absolute w-full h-full bg-[#f5efd6] top-0 left-0 rounded-2xl"
-          ></motion.div>
+            className="z-20 absolute w-full h-full flex flex-row gap-2 items-center bg-[#f5efd6] top-0 left-0 rounded-2xl p-4 overflow-x-scroll"
+          >
+            {paths.map((p) => (
+              <img src={"/" + p} className="h-full w-auto rounded-xl"></img>
+            ))}
+          </motion.div>
         )}
       </AnimatePresence>
       <div

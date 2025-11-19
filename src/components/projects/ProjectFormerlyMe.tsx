@@ -41,7 +41,15 @@ function ProjectFormerlyMe() {
       </p>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
         <LinkButton link="https://formerly.me" text="formerly.me" />
-        <ImageButton />
+        <ImageButton
+          paths={[
+            "formerly_macrobiome.png",
+            "formerly_colors.png",
+            "formerly_tone.png",
+            "formerly_loops.png",
+            "formerly_discog.png",
+          ]}
+        />
       </div>
     </div>
   );

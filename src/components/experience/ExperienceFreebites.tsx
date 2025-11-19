@@ -11,6 +11,7 @@ import GitHubLogo from "../logos/GithubLogo";
 import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
+import PixiLogo from "../logos/PixiLogo";
 
 function ExperienceFreebites() {
   return (
@@ -44,6 +45,7 @@ function ExperienceFreebites() {
           <CloudflareLogo s={32} />
           <GitHubLogo s={32} />
           <ReactLogo s={32} />
+          <PixiLogo s={32} />
           <NextJSLogo s={32} />
           <VercelLogo s={32} />
         </div>

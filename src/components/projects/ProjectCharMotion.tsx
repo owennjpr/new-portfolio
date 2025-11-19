@@ -45,7 +45,9 @@ function ProjectCharMotion() {
           link="https://github.com/owennjpr/char-motion"
           text="Git Repository"
         />
-        <ImageButton />
+        <ImageButton
+          paths={["char_home.png", "char_docs.png", "char_gallery.png"]}
+        />
       </div>
     </div>
   );

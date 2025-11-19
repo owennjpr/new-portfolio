@@ -52,7 +52,9 @@ function ProjectWAOT() {
           link="https://github.com/asendlakowski/whos-afraid-tailwind"
           text="Git Repository"
         />
-        <ImageButton />
+        <ImageButton
+          paths={["waot_home.png", "waot_mondrian.png", "waot_swan.png"]}
+        />
       </div>
     </div>
   );
