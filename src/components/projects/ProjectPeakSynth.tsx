@@ -2,6 +2,7 @@ import CppLogo from "../logos/CppLogo.";
 import LinkButton from "../LinkButton";
 import { Tooltip } from "react-tooltip";
 import ImageButton from "../ImageButton";
+import { Txt } from "@char-motion/react";
 
 function ProjectPeakSynth() {
   return (
@@ -23,7 +24,14 @@ function ProjectPeakSynth() {
                 borderRadius: 8,
               }}
             >
-              JUCE
+              <Txt
+                enter={{
+                  type: "typed sweep",
+                  options: { rate: 30 },
+                }}
+              >
+                JUCE
+              </Txt>
             </Tooltip>
           </>
           <CppLogo s={32} />
