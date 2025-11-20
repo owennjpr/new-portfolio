@@ -26,14 +26,24 @@ function BackToTop() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="glassBorder fixed bottom-0 right-0 p-2 sm:p-4 m-2 sm:m-4 text-sm sm:text-base cursor-pointer"
+          className="fixed bottom-0 right-0 p-2 sm:p-4 text-sm sm:text-base cursor-pointer"
           onClick={scrollTop}
           initial={{ translateX: 200 }}
           animate={{
             translateX: 0,
-            transition: { duration: 0.5, ease: "backInOut" },
+            transition: { duration: 0.5, ease: "easeInOut" },
           }}
           exit={{ translateX: 200 }}
+          style={{
+            borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+            borderLeft: "1px solid rgba(255, 255, 255, 0.5)",
+            borderBottom: 0,
+            borderRight: 0,
+            borderTopLeftRadius: 16,
+            backgroundColor: "#f5efd6",
+            zIndex: 30,
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+          }}
         >
           <Txt hover={{ type: "case" }}>back to top</Txt>
         </motion.div>

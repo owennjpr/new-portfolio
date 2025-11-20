@@ -18,7 +18,7 @@ export default function LandingInner() {
   useEffect(() => {
     const handleResize = () => {
       console.log("resizing");
-      setTargetWidth(Math.max(window.innerWidth * 0.5, 350));
+      setTargetWidth(Math.min(Math.max(window.innerWidth * 0.5, 350), 1000));
     };
 
     window.addEventListener("resize", handleResize);
