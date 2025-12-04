@@ -49,6 +49,10 @@ function ProjectPeakSynth() {
           link="https://github.com/owennjpr/PeakSynth-Audio-Plugin"
           text="Git Repository & Download"
         />
+        <LinkButton
+          link="https://drive.google.com/file/d/1MyZLQpser3z00eg5mtKh2x4wodKL4FYz/view?usp=sharing"
+          text="Video Demo"
+        />
         <ImageButton paths={["peaksynth.png"]} />
       </div>
     </div>

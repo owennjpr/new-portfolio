@@ -8,7 +8,7 @@ function ExperienceIDTech() {
         <div className="flex flex-col items-center sm:flex-row sm:items-baseline gap-1 sm:gap-4">
           <h2 className="text-2xl sm:text-3xl">iD Tech</h2>
           <p className="text-lg">Instructor</p>
-          <p className="">(Jun 2024 - Aug 2024)</p>
+          <p className="">(06/2024 - 08/2024)</p>
         </div>
         <p className="text-sm sm:text-base text-center sm:text-start">
           I led and managed summer classes in Python, robotics, and more at the

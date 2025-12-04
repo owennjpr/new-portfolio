@@ -14,6 +14,7 @@ function Experience() {
       <div className="grid lg:grid-cols-2 lg:flex-row gap-8">
         <ExperienceJumboCode />
         <ExperienceIDEALab />
+        {/* <ExperienceSoundSketch /> */}
         <ExperienceIDTech />
         <ExperienceThriftway />
       </div>

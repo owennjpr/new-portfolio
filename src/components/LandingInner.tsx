@@ -1,7 +1,13 @@
 import { Txt } from "@char-motion/react";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-export default function LandingInner() {
+
+interface LandingInnerProps {
+  textBody: string;
+}
+
+export default function LandingInner(props: LandingInnerProps) {
+  const { textBody } = props;
   const [step, setStep] = useState<number>(0);
   const [targetWidth, setTargetWidth] = useState<number>(
     window.innerWidth * 0.4
@@ -143,11 +149,7 @@ export default function LandingInner() {
                     }}
                     className="px-8 text-sm md:text-base"
                   >
-                    I'm a Full-Stack developer and recent CS/STS grad from Tufts
-                    University, originally from Seattle, Washington. My work
-                    focuses on web development, creative audio applications, and
-                    software designed for social impact. Explore this site to
-                    see everything I have been working on!
+                    {textBody}
                   </Txt>
                   <Txt
                     enter={{

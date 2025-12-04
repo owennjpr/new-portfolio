@@ -20,7 +20,7 @@ function ExperienceFreebites() {
         <div className="flex flex-col items-center sm:flex-row sm:items-baseline gap-1 sm:gap-4">
           <h2 className="text-2xl sm:text-3xl">FreeBites</h2>
           <p className="text-lg">Full-Stack Developer</p>
-          <p className="">(May 2024 - Present)</p>
+          <p className="">(05/2024 - Present)</p>
         </div>
         <p className="text-sm sm:text-base text-center sm:text-start">
           FreeBites is a student-founded company created by Tufts University
