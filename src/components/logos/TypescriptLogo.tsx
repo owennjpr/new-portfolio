@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://www.typescriptlang.org/" className="anchor-typescript">
+      <a
+        href="https://www.typescriptlang.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-typescript"
+      >
         <svg
           height={s}
           viewBox="0 0 640 640"

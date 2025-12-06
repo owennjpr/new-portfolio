@@ -13,7 +13,12 @@ function ProjectPeakSynth() {
         </h2>
         <div className="flex flex-row gap-4 justify-center sm:justify-start w-full sm:w-auto">
           <>
-            <a href="https://juce.com/made-with-juce/" className="anchor-juce">
+            <a
+              href="https://juce.com/made-with-juce/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="anchor-juce"
+            >
               <img src="/JUCE_Logo.png" width="36" />
             </a>
             <Tooltip

@@ -38,7 +38,7 @@ function ExpandableImage(props: ExpandableImageProps) {
                 onClick={(e) => e.stopPropagation()}
               />
               <Txt
-                className="w-full text-center pt-2 h-6 cursor-pointer flex-shrink-0"
+                className="w-full text-center pt-2 h-6 cursor-pointer shrink-0"
                 enter={{
                   type: "typed sweep",
                   options: { startDelay: 300, rate: 50 },

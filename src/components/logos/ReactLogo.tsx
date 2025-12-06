@@ -4,7 +4,12 @@ import { Tooltip } from "react-tooltip";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://react.dev/" className="anchor-react">
+      <a
+        href="https://react.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-react"
+      >
         <svg
           height={s}
           viewBox="175.7 78 490.6 436.9"

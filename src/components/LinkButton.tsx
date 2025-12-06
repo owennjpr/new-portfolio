@@ -11,6 +11,8 @@ function LinkButton(props: LinkButtonProps) {
   return (
     <a
       href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className="w-full flex flex-row justify-between items-center gap-2 p-2 rounded-lg border border-black hover:border-[#0000] hover:text-white hover:bg-[#0008] transition-all"
     >
       {text ? (

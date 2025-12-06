@@ -16,13 +16,10 @@ function Aquae() {
         />
 
         <p className="text-sm xl:text-base text-center xl:text-start">
-          An open source character-based text animation library published
-          through NPM. Uses character by character string manipulation
-          techniques in a declarative component that can be dragged and dropped
-          into any React stack. It includes a collection of enter, hover, and
-          morph effects targeting flexible use cases to make websites feel more
-          alive with a retro ASCII flair. All of the text animations you've seen
-          here on this website are powered by this library.
+          Aquae was a continuation of my experimentation following Petal, and is
+          definitely my most uptempo and energetic song. It is also the song I
+          took the least amount of time to make, a fun track created in a few
+          days that I liked enough to release immediately.
         </p>
       </div>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">

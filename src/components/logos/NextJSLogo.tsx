@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://nextjs.org/" className="anchor-next">
+      <a
+        href="https://nextjs.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-next"
+      >
         <svg
           height={s}
           viewBox=".5 -.2 1023 1024.1"

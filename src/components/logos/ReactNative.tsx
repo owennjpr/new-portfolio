@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://reactnative.dev/" className="anchor-native">
+      <a
+        href="https://reactnative.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-native"
+      >
         <svg
           fill="none"
           height={s}

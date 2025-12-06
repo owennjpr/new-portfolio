@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://firebase.google.com/" className="anchor-firebase">
+      <a
+        href="https://firebase.google.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-firebase"
+      >
         <svg
           width={s}
           height={s}

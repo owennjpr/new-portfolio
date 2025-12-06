@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://www.mongodb.com/" className="anchor-mongo">
+      <a
+        href="https://www.mongodb.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-mongo"
+      >
         <svg
           height={s}
           viewBox="8.738 -5.03622834 17.45992422 39.40619484"

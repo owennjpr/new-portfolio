@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://cplusplus.com/" className="anchor-cpp">
+      <a
+        href="https://cplusplus.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-cpp"
+      >
         <svg
           width={s}
           height={s}

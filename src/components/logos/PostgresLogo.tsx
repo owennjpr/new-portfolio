@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://www.postgresql.org/" className="anchor-postgres">
+      <a
+        href="https://www.postgresql.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-postgres"
+      >
         <svg
           width={s}
           height={s}

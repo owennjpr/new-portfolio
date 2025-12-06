@@ -15,22 +15,25 @@ function Petal() {
           path="covers/ptl.jpeg"
           altStyles="w-72 md:w-60 h-72 md:h-60"
         />
-
-        <p className="text-sm md:text-base text-center md:text-start">
-          An open source character-based text animation library published
-          through NPM. Uses character by character string manipulation
-          techniques in a declarative component that can be dragged and dropped
-          into any React stack. It includes a collection of enter, hover, and
-          morph effects targeting flexible use cases to make websites feel more
-          alive with a retro ASCII flair. All of the text animations you've seen
-          here on this website are powered by this library.
-        </p>
+        <div className="flex flex-row flex-wrap gap-2 sm:gap-4 text-sm/4 sm:text-base/5 ">
+          <p className="text-sm md:text-base text-center md:text-start">
+            Petal was my most ambitious project, constructed as a narrative
+            album, intertwining a story with the music every step of the way.
+            This story centers around a 'gardener' of the afterlife, who has the
+            responsibility of deciding which souls are allowed to take root, and
+            which will be pruned from the garden. Over the course of their
+            lifetime their perspective on this responsibility shifts and they
+            make their own way forward. Musically I wanted to create something
+            that felt organic, soft, and untethered, both in terms of
+            composition and production techniques.
+          </p>
+          <LinkButton
+            link="https://distrokid.com/hyperfollow/formerly/petal"
+            text="Streaming Links"
+          />
+        </div>
       </div>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
-        <LinkButton
-          link="https://distrokid.com/hyperfollow/formerly/petal"
-          text="Streaming Links"
-        />
         {/* <ImageButton
           paths={["char_home.png", "char_docs.png", "char_gallery.png"]}
         /> */}

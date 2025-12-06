@@ -8,26 +8,26 @@ function Smokejumpers() {
         <p className="">(2024)</p>
       </div>
       <p className="text-sm sm:text-base text-center sm:text-start">
-        An open source character-based text animation library published through
-        NPM. Uses character by character string manipulation techniques in a
-        declarative component that can be dragged and dropped into any React
-        stack. It includes a collection of enter, hover, and morph effects
-        targeting flexible use cases to make websites feel more alive with a
-        retro ASCII flair. All of the text animations you've seen here on this
-        website are powered by this library.
+        I created the full soundtrack for "Smokejumpers", part of the "Rolling
+        Midnight" live actual play podcast anthology series created by the award
+        winning Midnight Ceremonies Media studio. I composed, produced, mixed,
+        and mastered the whole soundtrack, performing and recording all of the
+        guitar parts for Smokejumpers as well. In addition to the release of the
+        show, a soundtrack album was created to highlight all of the composers
+        involved, for which I contributed to 15 tracks.
       </p>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
         <LinkButton
-          link="https://char-motion.vercel.app/"
-          text="Website & Docs"
+          link="https://open.spotify.com/album/2qJwtNjs34ZQpIL0dzr7H4?si=2fJJY_YGR0ihbLxkomXW_g"
+          text="Listen to the Soundtrack"
         />
         <LinkButton
-          link="https://www.npmjs.com/package/@char-motion/react/"
-          text="NPM"
+          link="https://open.spotify.com/show/4CzUmSPJVq1ekTIabKXQsu?si=d982ac0d672e4ef2"
+          text="Rolling Midnight"
         />
         <LinkButton
-          link="https://www.npmjs.com/package/@char-motion/react/"
-          text="NPM"
+          link="https://midnightceremoniesmedia.com/"
+          text="Midnight Ceremonies Media"
         />
       </div>
     </div>

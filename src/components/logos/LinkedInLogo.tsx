@@ -6,6 +6,8 @@ function Logo({ s }: { s: number }) {
     <>
       <a
         href="https://www.linkedin.com/in/owen-prendergast-351726277/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="anchor-linkedin"
       >
         <svg

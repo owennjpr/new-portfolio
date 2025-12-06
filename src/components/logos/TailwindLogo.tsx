@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://tailwindcss.com/" className="anchor-tailwind">
+      <a
+        href="https://tailwindcss.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-tailwind"
+      >
         <svg
           height={s}
           preserveAspectRatio="xMidYMid"

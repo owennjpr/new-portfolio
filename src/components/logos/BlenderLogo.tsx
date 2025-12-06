@@ -3,7 +3,12 @@ import { Tooltip } from "react-tooltip";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://www.blender.org/" className="anchor-blender">
+      <a
+        href="https://www.blender.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-blender"
+      >
         <svg
           height={s}
           viewBox=".1 16.7 2472.8 1996.5"

@@ -4,7 +4,12 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://vercel.com" className="anchor-vercel">
+      <a
+        href="https://vercel.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="anchor-vercel"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={s}

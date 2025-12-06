@@ -4,7 +4,11 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://github.com/owennjpr">
+      <a
+        href="https://github.com/owennjpr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <svg
           width={s}
           height={s}

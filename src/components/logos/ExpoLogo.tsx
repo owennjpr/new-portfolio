@@ -4,7 +4,7 @@ import { Txt } from "@char-motion/react";
 function Logo({ s }: { s: number }) {
   return (
     <>
-      <a href="https://expo.dev/">
+      <a href="https://expo.dev/" target="_blank" rel="noopener noreferrer">
         <svg
           width={s}
           height={s}

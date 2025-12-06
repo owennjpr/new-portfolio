@@ -2,6 +2,7 @@ import TypescriptLogo from "../logos/TypescriptLogo";
 import ReactLogo from "../logos/ReactLogo";
 import VercelLogo from "../logos/VercelLogo";
 import NextJSLogo from "../logos/NextJSLogo";
+import NodeLogo from "../logos/NodeJSLogo";
 import LinkButton from "../LinkButton";
 import TailwindLogo from "../logos/TailwindLogo";
 import ImageButton from "../ImageButton";
@@ -18,6 +19,7 @@ function ProjectWAOT() {
           <TypescriptLogo s={32} />
           <TailwindLogo s={32} />
           <NextJSLogo s={32} />
+          <NodeLogo s={32} />
           <VercelLogo s={32} />
         </div>
       </div>
@@ -33,6 +35,8 @@ function ProjectWAOT() {
         <a
           className="text-emerald-600"
           href="https://en.wikipedia.org/wiki/Who%27s_Afraid_of_Red,_Yellow_and_Blue"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           "Who's Afraid of Red, Yellow, And Blue"
         </a>

@@ -28,7 +28,7 @@ function ImageButton(props: ImageButtonProps) {
       </AnimatePresence>
       <div
         id="anchor-image-button"
-        className="z-30 flex flex-col justify-center items-center p-2 rounded-lg border border-black hover:border-[#0000] hover:text-white hover:bg-[#0008] transition-all cursor-pointer"
+        className="z-30 flex flex-col justify-center items-center p-2 rounded-lg border border-black hover:border-[#0000] hover:text-white bg-[#f5efd6] hover:bg-[#0008] transition-all cursor-pointer"
         onClick={() => {
           setOverlay(!overlay);
         }}

@@ -21,6 +21,7 @@ import ProjectCharMotion from "../components/projects/ProjectCharMotion";
 import ProjectCoeqwal from "../components/projects/ProjectCoeqwal";
 import ProjectFormerlyMe from "../components/projects/ProjectFormerlyMe";
 import ProjectPeakSynth from "../components/projects/ProjectPeakSynth";
+import ProjectPortfolio from "../components/projects/ProjectPortfolio";
 import ProjectWAOT from "../components/projects/ProjectWAOT";
 
 function Grad() {
@@ -31,15 +32,35 @@ function Grad() {
         <LandingInner
           textBody="I'm a musician, full-stack developer and recent CS/STS grad from Tufts
                     University, originally from Seattle, Washington. My work
-                    focuses on web development, creative audio applications, and
-                    software designed for social impact. Explore this site to
+                    focuses on electronic music, creative audio programing, web development,
+                    and software designed for social impact. Explore this site to
                     see everything I have been working on!"
         />
         <div className="w-7/8 max-w-340 flex flex-col justify-center gap-32 mb-8">
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl pt-16" id="projects">
+            <p className="text-4xl pt-16 z-10" id="projects">
               MUSICAL RELEASES
             </p>
+            <div className="glassBorder p-4 relative">
+              <p className="text-sm sm:text-base text-center">
+                In 2023 I created the musical alias "formerly." to share the
+                electronic ambient music I had been creating for some time,
+                starting with the album Color Coding, Vol. 1. Since then I have
+                released 3 additional albums and 2 singles, accumulating over
+                1.4 million streams between platforms. For a more thorough look
+                at my work under this name, check out{" "}
+                <a
+                  className="text-emerald-600"
+                  href="https://formerly.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  formerly.me
+                </a>{" "}
+                (linked below in the technical projects section) and see my full
+                discography below.
+              </p>
+            </div>
             <ColorCoding />
             <Petal />
             <div className="grid lg:grid-cols-2 lg:flex-row gap-8">
@@ -49,7 +70,7 @@ function Grad() {
             <OtherWorks />
           </div>
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl pt-16" id="projects">
+            <p className="text-4xl z-10" id="projects">
               ORIGINAL SOUNDTRACKS
             </p>
             <Smokejumpers />
@@ -59,7 +80,7 @@ function Grad() {
             </div>
           </div>
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl pt-16" id="projects">
+            <p className="text-4xl z-10" id="projects">
               TECHNICAL PROJECTS
             </p>
             <ProjectFormerlyMe />
@@ -67,9 +88,10 @@ function Grad() {
             <ProjectCharMotion />
             <ProjectCoeqwal />
             <ProjectWAOT />
+            <ProjectPortfolio />
           </div>
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl">WORK EXPERIENCE</p>
+            <p className="text-4xl z-10">WORK EXPERIENCE</p>
             <ExperienceFreebites />
             <div className="grid lg:grid-cols-2 lg:flex-row gap-8">
               <ExperienceTA />
@@ -79,7 +101,7 @@ function Grad() {
             </div>
           </div>
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl">RESEARCH EXPERIENCE</p>
+            <p className="text-4xl z-10">RESEARCH EXPERIENCE</p>
             <ExperienceIDEALab />
             <ExperienceSoundSketch />
           </div>

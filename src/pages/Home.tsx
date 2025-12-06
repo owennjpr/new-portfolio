@@ -28,7 +28,7 @@ function Home() {
         />
         <div className="w-7/8 max-w-340 flex flex-col justify-center gap-32 mb-8">
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl pt-16" id="projects">
+            <p className="text-4xl pt-16 z-10" id="projects">
               PROJECTS
             </p>
             <ProjectCharMotion />
@@ -38,7 +38,7 @@ function Home() {
             <ProjectWAOT />
           </div>
           <div className="w-full h-full flex flex-col items-center gap-8">
-            <p className="text-4xl">EXPERIENCE</p>
+            <p className="text-4xl z-10">EXPERIENCE</p>
             <ExperienceFreebites />
             <ExperienceTA />
             <div className="grid lg:grid-cols-2 lg:flex-row gap-8">

@@ -21,12 +21,16 @@ function Socials() {
       >
         <a
           href="https://github.com/owennjpr"
+          target="_blank"
+          rel="noopener noreferrer"
           className="cursor-pointer hover:opacity-70 transition-opacity"
         >
           <GithubLogo s={24} />
         </a>
         <a
           href="https://www.linkedin.com/in/owen-prendergast-351726277/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="cursor-pointer hover:opacity-70 transition-opacity"
         >
           <LinkedInLogo s={24} />
@@ -34,6 +38,8 @@ function Socials() {
 
         <a
           href="mailto:owenprendergast8@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
           className="anchor-mail cursor-pointer hover:opacity-70 transition-opacity"
         >
           <svg
