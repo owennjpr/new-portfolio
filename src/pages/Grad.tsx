@@ -9,6 +9,14 @@ import ExperienceJumboCode from "../components/experience/ExperienceJumboCode";
 import ExperienceSoundSketch from "../components/experience/ExperienceSoundSketch";
 import ExperienceTA from "../components/experience/ExperienceTA";
 import ExperienceThriftway from "../components/experience/ExperienceThriftway";
+import Aquae from "../components/music/Aquae";
+import ColorCoding from "../components/music/ColorCoding";
+import OtherSoundtracks from "../components/music/OtherSoundtracks";
+import OtherWorks from "../components/music/OtherWorks";
+import Petal from "../components/music/Petal";
+import Smokejumpers from "../components/music/Smokejumpers";
+import StandingBy from "../components/music/StandingBy";
+import Subsuming from "../components/music/Subsuming";
 import ProjectCharMotion from "../components/projects/ProjectCharMotion";
 import ProjectCoeqwal from "../components/projects/ProjectCoeqwal";
 import ProjectFormerlyMe from "../components/projects/ProjectFormerlyMe";
@@ -28,6 +36,28 @@ function Grad() {
                     see everything I have been working on!"
         />
         <div className="w-7/8 max-w-340 flex flex-col justify-center gap-32 mb-8">
+          <div className="w-full h-full flex flex-col items-center gap-8">
+            <p className="text-4xl pt-16" id="projects">
+              MUSICAL RELEASES
+            </p>
+            <ColorCoding />
+            <Petal />
+            <div className="grid lg:grid-cols-2 lg:flex-row gap-8">
+              <Aquae />
+              <Subsuming />
+            </div>
+            <OtherWorks />
+          </div>
+          <div className="w-full h-full flex flex-col items-center gap-8">
+            <p className="text-4xl pt-16" id="projects">
+              ORIGINAL SOUNDTRACKS
+            </p>
+            <Smokejumpers />
+            <div className="grid lg:grid-cols-2 lg:flex-row gap-8">
+              <StandingBy />
+              <OtherSoundtracks />
+            </div>
+          </div>
           <div className="w-full h-full flex flex-col items-center gap-8">
             <p className="text-4xl pt-16" id="projects">
               TECHNICAL PROJECTS
