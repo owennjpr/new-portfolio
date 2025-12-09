@@ -11,10 +11,9 @@ function ExperienceThriftway() {
             <p className="">(06/2022 - 08/2022)</p>
           </div>
           <p className="text-sm sm:text-base text-center sm:text-start">
-            My first real job. I ran checkstands, bagged, and performed a
-            variety of maintenance tasks at the Thriftway grocery store. I
-            Maintained efficient and friendly service during hectic and high
-            pressure periods.
+            I ran checkstands, bagged, and performed a variety of maintenance
+            tasks at the Thriftway grocery store. I Maintained efficient and
+            friendly service during hectic and high pressure periods.
           </p>
         </div>
         <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">

@@ -30,9 +30,9 @@ function Grad() {
       <BackgroundWrapper />
       <div className="w-full flex flex-col justify-center items-center">
         <LandingInner
-          textBody="I'm a musician, full-stack developer and recent CS/STS grad from Tufts
+          textBody="I'm a musician, full-stack developer, and recent CS/STS grad from Tufts
                     University, originally from Seattle, Washington. My work
-                    focuses on electronic music, creative audio programing, web development,
+                    focuses on electronic music, creative audio programming, web development,
                     and software designed for social impact. Explore this site to
                     see everything I have been working on!"
         />
@@ -44,11 +44,11 @@ function Grad() {
             <div className="glassBorder p-4 relative">
               <p className="text-sm sm:text-base text-center">
                 In 2023 I created the musical alias "formerly." to share the
-                electronic ambient music I had been creating for some time,
-                starting with the album Color Coding, Vol. 1. Since then I have
-                released 3 additional albums and 2 singles, accumulating over
-                1.4 million streams between platforms. For a more thorough look
-                at my work under this name, check out{" "}
+                electronic ambient music I had been creating, starting with the
+                album Color Coding, Vol. 1. Since then I have released 3
+                additional albums and 2 singles, accumulating over 1.4 million
+                streams between platforms. For a more thorough look at my work
+                under this name, check out{" "}
                 <a
                   className="text-emerald-600"
                   href="https://formerly.me"
@@ -57,7 +57,7 @@ function Grad() {
                 >
                   formerly.me
                 </a>{" "}
-                (linked below in the technical projects section) and see my full
+                (linked in the technical projects section) and see my full
                 discography below.
               </p>
             </div>

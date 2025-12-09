@@ -16,10 +16,10 @@ function ExperienceSoundSketch() {
           <p className="text-sm sm:text-base text-center sm:text-start">
             A small research group dedicated to creating a multitrack spatial
             audio recorder in Virtual Reality, doubling as an experimental
-            chromesthesia simulator. This project is overseen by a Tufts
+            chromesthesia simulator. This project was overseen by a Tufts
             professor who wanted to recreate the interactive audiovisual
             experience of his synesthesia in a Virtual Reality context. The goal
-            is to create something in Unity VR that records head tracking data
+            was to create something in Unity VR that records head tracking data
             and uses it to recreate the recorder's audio spatialization
             experience for a recipient with a tracked visual component.
           </p>
@@ -31,16 +31,16 @@ function ExperienceSoundSketch() {
             <CSharpLogo s={32} />
             <GitHubLogo s={32} />
           </div>
-          <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
-            {/* <LinkButton
+          {/* <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
+            <LinkButton
               link="https://sites.tufts.edu/idea/"
               text="The IDEA Lab"
             />
             <LinkButton
               link="https://sites.tufts.edu/idea/owl-head/"
               text="Owlhead"
-            /> */}
-          </div>
+            />
+          </div> */}
         </div>
       </div>
     </div>

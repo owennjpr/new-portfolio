@@ -26,12 +26,12 @@ function ProjectWAOT() {
       <p className="text-sm sm:text-base text-center sm:text-start">
         A project I built for the Tufts JumboHack 2025 Hackathon along with four
         other developers and a designer. We wanted to make a web development
-        teaching tool dedicated to learning Tailwind, since we had all felt that
-        there were not too many resources for this when we were trying to first
-        learn the framework. <br />
+        teaching tool dedicated to learning Tailwind, since we felt there were
+        not enough resources for this when we were trying to first learn the
+        framework. <br />
         <br />
         With our name inspired by Barnett Newman's famous abstract painting
-        series
+        series{" "}
         <a
           className="text-emerald-600"
           href="https://en.wikipedia.org/wiki/Who%27s_Afraid_of_Red,_Yellow_and_Blue"
@@ -43,9 +43,9 @@ function ProjectWAOT() {
         , we wanted to create a set of educational Tailwind challenges centered
         around recreating famous abstract artworks, each teaching the user about
         how to invoke key CSS properties like flexbox, grid, and border radius
-        in Tailwind. The website uses a live code editor for the user to get
-        instant visual feedback on their work and an image difference checker
-        for seeing how well they were able to match the original paintings.
+        in Tailwind. The website uses a live code editor for the user to gain
+        instant visual feedback on their work and an image diff checker for
+        seeing how well they were able to match the original paintings.
       </p>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
         <LinkButton

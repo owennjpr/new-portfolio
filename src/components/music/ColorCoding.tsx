@@ -17,12 +17,11 @@ function ColorCoding() {
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-sm sm:text-base text-center sm:text-start">
             My first project as "formerly.". This album drew greatly from warm
-            feelings of nostalgia and happy childhood memories coming together
-            into 6 songs. This was the beginning of my exploration of music and
-            color associations through the Color Coding series, and established
-            the format for each of these albums: 6 songs with a hexidecimal
-            color code in the title to connect more specific colors than just
-            blue or green for example.
+            feelings of nostalgia and happy childhood memories. This was the
+            beginning of my exploration of music and color associations through
+            the Color Coding series, and established the format for each of
+            these albums: 6 songs with a hexidecimal color code in the title to
+            connect more specific colors than just blue or green for example.
           </p>
           <div className="flex flex-row flex-wrap gap-2 sm:gap-4 text-sm/4 sm:text-base/5 ">
             <p>Colors/Songs:</p>
@@ -46,9 +45,9 @@ function ColorCoding() {
         />
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-sm sm:text-base text-center sm:text-start">
-            A much more cold and distant album compared to its predecessor, Vol.
-            2 explores the way that nostalgia can turn to wistfulness if you
-            become lost in it. The color palette of this album is also the most
+            A colder and more reserved album compared to its predecessor, Vol. 2
+            explores the way that nostalgia can turn to wistfulness if you lose
+            yourself to it. The color palette of this album is also the most
             muted of the 3 Volumes, in contrast to the bright pastels of Vol. 1
             and the saturated colors of Vol. 3.
           </p>
@@ -75,12 +74,12 @@ function ColorCoding() {
         <div className="flex flex-col gap-2 pb-2">
           <p className="text-sm sm:text-base text-center sm:text-start">
             The final installment in the Color Coding trilogy, and the largest
-            range both in terms of color palette and the music itself, which
-            moves from bright and spacey to dark and distorted over the course
-            of the album. It was important to me that all 3 installments had
-            their own unique feel, so this album explored a lot of new sounds
-            that I hadn't covered with the first two Color Coding volumes, and
-            is one of my favorites as a result.
+            range both in terms of color palette and the music itself. The
+            sounds and textures move from bright and spacey to dark and
+            distorted over the course of the album. It was important to me that
+            all 3 installments had their own unique feel, so this album explored
+            new sounds that I hadn't covered with the first two Color Coding
+            volumes, and is one of my favorites as a result.
           </p>
           <div className="flex flex-row flex-wrap gap-2 sm:gap-4 text-sm/4 sm:text-base/5 ">
             <p>Colors/Songs:</p>

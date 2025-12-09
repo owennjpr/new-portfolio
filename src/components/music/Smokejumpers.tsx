@@ -11,10 +11,10 @@ function Smokejumpers() {
         I created the full soundtrack for "Smokejumpers", part of the "Rolling
         Midnight" live actual play podcast anthology series created by the award
         winning Midnight Ceremonies Media studio. I composed, produced, mixed,
-        and mastered the whole soundtrack, performing and recording all of the
-        guitar parts for Smokejumpers as well. In addition to the release of the
-        show, a soundtrack album was created to highlight all of the composers
-        involved, for which I contributed to 15 tracks.
+        and mastered the whole soundtrack, including performing and recording
+        all of the guitar parts. In addition to the release of the show, a
+        soundtrack album was created to highlight all of the composers involved,
+        for which I contributed the 15 tracks.
       </p>
       <div className="w-full flex flex-col sm:flex-row mt-4 gap-4 justify-center sm:justify-start">
         <LinkButton

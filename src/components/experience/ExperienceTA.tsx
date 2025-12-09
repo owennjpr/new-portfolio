@@ -10,12 +10,12 @@ function ExperienceTA() {
           <p className="">(09/2024 - 06/2025)</p>
         </div>
         <p className="text-sm sm:text-base text-center sm:text-start">
-          Working as a course assistant for Tufts University's CS105 Programming
-          Languages Course. This course focuses on understanding high level
+          Worked as a course assistant for Tufts University's CS105 Programming
+          Languages Course. This course focused on understanding high level
           coding concepts like functional programming vs OOP, static vs dynamic
-          type systems, and operational semantics. I lead in person recitation
-          sessions, facilitate office hours for students and grade asisgnments,
-          providing feedback on their work and coding practices.
+          type systems, and operational semantics. I led in person recitation
+          sessions, facilitated office hours for students and graded
+          asisgnments, providing feedback on their work and coding practices.
         </p>
         <div className="flex flex-row gap-4 items-center mt-2 flex-wrap">
           <p className="text-xl">

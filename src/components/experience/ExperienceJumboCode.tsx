@@ -19,11 +19,11 @@ function ExperienceJumboCode() {
             <p className="">(09/2024 - 05/2025)</p>
           </div>
           <p className="text-sm sm:text-base text-center sm:text-start">
-            Working on a 14 person team to develop an internal web app platform
+            Worked on a 14 person team to develop an internal web app platform
             for English at Large, a nonprofit supporting immigrants in building
-            English language skills. Creating a site for administrators and
+            English language skills. Created a site for administrators and
             tutors to manage the organization's inventory of books and other
-            student resources. Collaboratively working to complete tickets for
+            student resources. Collaboratively worked to complete tickets for
             bi-weekly sprints, adding new content and features to the site.
           </p>
           <div className="flex flex-row gap-4 items-center mt-2 flex-wrap">

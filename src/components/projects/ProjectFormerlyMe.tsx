@@ -29,12 +29,12 @@ function ProjectFormerlyMe() {
         In addition to programming, one of the things I am most passionate about
         is music. I create and release my own ambient electronic music, and I
         wanted to have a website where I could archive everything I've created,
-        and a platform for some web based audio experiences. With this goal, I
-        created formerly.me, a living website that is constantly expanding with
-        new features and sub-projects.
+        and a platform for some web based audio experiences. With this goal in
+        mind, I created formerly.me, a living website that is constantly
+        expanding with new features and sub-projects.
         <br />
         <br />
-        The site contains a mix of interactive ways to learn more about my
+        The site contains a mix of interactive means to learn more about my
         released music, as well as several endlessly generating algorithmic
         music compositions like "Macrobiome" and "Tone Garden" built with
         TypeScript and the Web Audio API.

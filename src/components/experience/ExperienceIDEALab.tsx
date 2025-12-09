@@ -15,12 +15,14 @@ function ExperienceIDEALab() {
             <p className="">(02/2023 - 05/2025)</p>
           </div>
           <p className="text-sm sm:text-base text-center sm:text-start">
-            Developing software for the Owlhead project in the IDEA Lab at Tufts
+            Developed software for the Owlhead project in the IDEA Lab at Tufts
             University with the aim of altering perception in Virtual Reality,
             increasing field of view and accelerating head turning rate. As a
             researcher I constructed environments and wrote scripts for virtual
             testing in the Unity Game Engine to record user experience and
-            performance in a series of trials.
+            performance in a series of trials. This research culminated in a
+            presentation at the spring 2025 NEC HFES Student Research
+            Conference.
           </p>
         </div>
         <div>
